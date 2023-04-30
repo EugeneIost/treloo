@@ -2,6 +2,10 @@ import Image from "next/image";
 import FooterLinkItem from "../UI/FooterLinkItem";
 import cn from "classnames";
 
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
+
 const Footer = () => {
   return (
     <footer
@@ -19,7 +23,7 @@ const Footer = () => {
         )}
       >
         <Image
-          src={"/images/footer-background.png"}
+          src={`${publicRuntimeConfig.staticFolder}/images/footer-background.png`}
           alt="background"
           fill
           quality={100}

@@ -1,6 +1,9 @@
 import IOffer from "@/types/Offer";
 import Image from "next/image";
 import cn from "classnames";
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
 
 interface OfferCardProps {
   offer: IOffer;
@@ -11,7 +14,7 @@ const OfferCard = ({ offer }: OfferCardProps) => {
     <div className="flex flex-col items-center bg-white rounded-[50px] pt-[21px] pb-[25px] pr-[13px] pl-[27px] shadow-[0_0_6px_rgba(0,0,0,0.05)]">
       <div className="flex flex-row items-center mb-[20px]">
         <Image
-          src={offer.imageUrl}
+          src={`${publicRuntimeConfig.staticFolder}${offer.imageUrl}`}
           alt={offer.title}
           width={293}
           height={273}

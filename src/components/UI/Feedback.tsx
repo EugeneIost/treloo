@@ -2,6 +2,9 @@ import IFeedback from "@/types/Feedback";
 import Image from "next/image";
 import Raiting from "./Rating";
 import cn from "classnames";
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
 
 interface FeedbackProps {
   feedback: IFeedback;
@@ -16,7 +19,7 @@ const Feedback = ({ feedback }: FeedbackProps) => {
       )}
     >
       <Image
-        src={"/images/quote.png"}
+        src={`${publicRuntimeConfig.staticFolder}/images/quote.png`}
         alt="quote"
         width={131}
         height={104}
@@ -49,13 +52,13 @@ const Feedback = ({ feedback }: FeedbackProps) => {
 
       <div className="h-[134px] pt-[24px] pl-[41px] pr-[38px] pb-[10px] absolute bottom-0 left-2/4 -translate-x-2/4 translate-y-2/4">
         <Image
-          src={"/images/feedback-photo-background.png"}
+          src={`${publicRuntimeConfig.staticFolder}/images/feedback-photo-background.png`}
           alt="feedback-background"
           fill
           quality={100}
         />
         <Image
-          src={feedback.imageUrl}
+          src={`${publicRuntimeConfig.staticFolder}${feedback.imageUrl}`}
           alt={feedback.userName}
           width={100}
           height={100}

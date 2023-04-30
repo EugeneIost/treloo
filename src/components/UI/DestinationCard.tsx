@@ -2,6 +2,9 @@ import IDestination from "@/types/Destination";
 import Image from "next/image";
 import LocationIcon from "./LocationIcon";
 import Raiting from "./Rating";
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
 
 interface DestinationCardProps {
   destination: IDestination;
@@ -17,7 +20,7 @@ const DestinationCard = ({ destination }: DestinationCardProps) => {
     >
       <div className="relative">
         <Image
-          src={destination.imageUrl}
+          src={`${publicRuntimeConfig.staticFolder}${destination.imageUrl}`}
           alt={destination.title}
           width={260}
           height={200}

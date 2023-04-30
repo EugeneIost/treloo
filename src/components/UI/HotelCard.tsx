@@ -1,4 +1,7 @@
 import Image from "next/image";
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
 
 interface HotelCardProps {
   imageUrl: string;
@@ -9,7 +12,7 @@ const HotelCard = ({ imageUrl, title }: HotelCardProps) => {
   return (
     <div className="flex flex-col items-center">
       <Image
-        src={imageUrl}
+        src={`${publicRuntimeConfig.staticFolder}${imageUrl}`}
         alt={title}
         width={300}
         height={150}
