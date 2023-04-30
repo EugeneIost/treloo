@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Subtitle from "../UI/Subtitle";
 import Achievement from "../UI/Achievement";
-import getConfig from 'next/config'
+import getConfig from "next/config";
 
 import cn from "classnames";
 
-const {publicRuntimeConfig} = getConfig()
+const { publicRuntimeConfig } = getConfig();
 
 const AboutSection = () => {
   return (
@@ -25,7 +25,7 @@ const AboutSection = () => {
         )}
       >
         <Image
-          src=`${publicRuntimeConfig.staticFolder}/images/about-section-image.png`
+          src={`${publicRuntimeConfig.staticFolder}/images/about-section-image.png`}
           alt="Travel Any Corner"
           width={480}
           height={800}
