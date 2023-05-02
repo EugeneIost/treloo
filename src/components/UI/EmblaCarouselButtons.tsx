@@ -8,7 +8,7 @@ interface NextPrevButtonsProps {
 export const PrevButton = ({ enabled, onClick }: NextPrevButtonsProps) => {
   return (
     <button
-      className="w-[40px] h-[40px] flex items-center justify-center border-[3px] border-blue/50 rounded-[15px]"
+      className="w-[40px] h-[40px] flex items-center justify-center border-[3px] border-blue/50 rounded-[15px] mr-[20px]"
       onClick={onClick}
       disabled={!enabled}
     >

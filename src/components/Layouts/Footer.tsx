@@ -74,9 +74,7 @@ const Footer = () => {
           &copy; 2023 Treloo LLC - All right reserved
         </span>
 
-        <ul
-          className={cn("flex flex-row gap-[50px] list-none", "sm:gap-[20px]")}
-        >
+        <ul className={cn("flex flex-row list-none")}>
           <FooterLinkItem>Rewiew</FooterLinkItem>
           <FooterLinkItem>Tips</FooterLinkItem>
           <FooterLinkItem>Alerts</FooterLinkItem>

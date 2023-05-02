@@ -55,7 +55,7 @@ const EmblaCarousel = ({ options }: EmblaCarouselProps) => {
         </div>
       </div>
 
-      <div className="flex flex-row justify-center gap-[20px] mt-[30px]">
+      <div className="flex flex-row justify-center mt-[30px]">
         <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
         <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
       </div>

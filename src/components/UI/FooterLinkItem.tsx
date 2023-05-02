@@ -9,8 +9,9 @@ const FooterLinkItem = ({ children }: FooterLinkItemProps) => {
   return (
     <li
       className={cn(
-        "text-xl/[36px] text-black/75 font-medium cursor-pointer hover:text-blue transition-all",
-        "lg:text-lg/[30px]"
+        "text-xl/[36px] text-black/75 font-medium cursor-pointer hover:text-blue transition-all mr-[50px] last:mr-0",
+        "lg:text-lg/[30px]",
+        "sm:mr-[20px]"
       )}
     >
       {children}

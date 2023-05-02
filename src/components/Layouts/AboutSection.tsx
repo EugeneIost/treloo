@@ -11,7 +11,7 @@ const AboutSection = () => {
   return (
     <div
       className={cn(
-        "py-[80px] px-[130px] flex flex-row gap-[120px] items-center justify-center",
+        "py-[80px] px-[130px] flex flex-row items-center justify-center",
         "lg:flex-col",
         "md:px-[20px]",
         "sm:px-[10px]"
@@ -19,7 +19,8 @@ const AboutSection = () => {
     >
       <div
         className={cn(
-          "min-w-[480px] min-h-[800px] relative",
+          "min-w-[480px] min-h-[800px] relative mr-[120px]",
+          "lg:mr-0 lg:mb-[120px]",
           "md:min-w-[360px] md:min-h-[600px]",
           "sm:min-w-full sm:min-h-full"
         )}

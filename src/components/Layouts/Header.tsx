@@ -22,13 +22,7 @@ const Header = () => {
           />
         </div>
 
-        <ul
-          className={cn(
-            "list-none flex flex-row gap-[50px]",
-            "md:gap-[30px]",
-            "lt:hidden"
-          )}
-        >
+        <ul className={cn("list-none flex flex-row", "lt:hidden")}>
           <NavItem>Review</NavItem>
           <NavItem>Tips</NavItem>
           <NavItem>Alerts</NavItem>

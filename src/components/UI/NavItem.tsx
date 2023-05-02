@@ -10,8 +10,8 @@ const NavItem = ({ children, color = "white" }: NavItemProps) => {
   return (
     <li
       className={cn(
-        `font-medium text-xl text-${color} hover:text-blue transition-all cursor-pointer`,
-        "md:text-lg"
+        `font-medium text-xl text-${color} hover:text-blue transition-all cursor-pointer mr-[50px]`,
+        "md:text-lg md:mr-[30px]"
       )}
     >
       {children}
