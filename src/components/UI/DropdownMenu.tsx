@@ -14,9 +14,9 @@ const DropdownMenu = ({ onClick, isActive }: DropdownMenuProps) => {
       )}
       <div
         className={cn(
-          "absolute top-0 right-0 w-[70vw] h-[100vh] flex flex-col bg-bg-color z-50 pl-[35px] translate-x-full transition-all",
+          "absolute top-0 -right-[70vw] w-[70vw] h-[100vh] flex flex-col bg-bg-color z-50 pl-[35px] transition-all",
           {
-            "translate-x-0": isActive,
+            "-translate-x-full": isActive,
           }
         )}
       >
